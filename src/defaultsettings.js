@@ -9,5 +9,6 @@ module.exports = {
 	upperCase: true,
 	diacritics: false,
 	forbiddenWords: [],
-	maxRetries: 10
+	maxRetries: 10,
+	alphabet: "abcdefghijklmnopqrstuvwxyz"
 };

@@ -21,6 +21,7 @@ describe("WordSearch", () => {
 			allowedDirections: ["N", "S", "E", "W", "NE", "NW", "SE", "SW"],
 			dictionary: ["Hello", "world"],
 			maxWords: 4,
+			alphabet: "abcdefghijklmnopqrstuvwxyz",
 			backwardsProbability: 0.3,
 			upperCase: true,
 			diacritics: false,

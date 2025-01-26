@@ -10,7 +10,8 @@ const testCases = [
       [".", ".", ".", ".", "."]
     ],
     allowedDirections: ["N", "S"],
-    backwardsProbability: 0.3,
+    alphabet: "abcdefghijklmnopqrstuvwxyz",
+	backwardsProbability: 0.3,
     possible: false
   },
   {
@@ -22,7 +23,8 @@ const testCases = [
       [".", ".", ".", ".", "."]
     ],
     allowedDirections: ["E"],
-    backwardsProbability: 1,
+    alphabet: "abcdefghijklmnopqrstuvwxyz",
+	backwardsProbability: 1,
     possible: true
   },
   {
@@ -34,7 +36,8 @@ const testCases = [
       [".", ".", ".", ".", "."]
     ],
     allowedDirections: ["E"],
-    backwardsProbability: 0,
+    alphabet: "abcdefghijklmnopqrstuvwxyz",
+	backwardsProbability: 0,
     possible: true
   },
   {
@@ -46,7 +49,8 @@ const testCases = [
       [".", ".", "X", ".", "."]
     ],
     allowedDirections: ["N", "S", "E", "W", "NE", "NW", "SE", "SW"],
-    backwardsProbability: 0.5,
+    alphabet: "abcdefghijklmnopqrstuvwxyz",
+	backwardsProbability: 0.5,
     possible: false
   }
 ];
@@ -58,7 +62,7 @@ describe("utils.findPathInGrid", () => {
         t.word,
         t.grid,
         t.allowedDirections,
-        t.backwardsProbability
+	    t.backwardsProbability
       );
       if (t.possible) {
         expect(res.length).toEqual(t.word.length);

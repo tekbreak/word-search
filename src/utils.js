@@ -155,11 +155,11 @@ const normalizeWord = (word, upperCase = true, keepDiacritics = false) => {
  * Returns a random letter, uppercase or lowercase.
  * @kind function
  * @name getRandomLetter
+ * @param alphabet The alphabet to use
  * @param {Boolean} upperCase - Whether to return an uppercase letter
  * @returns {String} - A random letter
  */
-const getRandomLetter = upperCase => {
-	let alphabet = "abcdefghijklmnopqrstuvwxyz";
+const getRandomLetter = (alphabet, upperCase) => {
 	if (upperCase) {
 		alphabet = alphabet.toUpperCase();
 	}
@@ -207,12 +207,13 @@ const createGrid = (cols, rows) => {
  * @kind function
  * @name fillGrid
  * @param {Array} grid - Grid to fill
+ * @param {string} alphabet - The alphabet to use
  * @param {Boolean} upperCase - Whether to fill the grid with uppercase letters
  * @returns {Array} - A new grid
  */
-const fillGrid = (grid, upperCase) => {
+const fillGrid = (grid, alphabet, upperCase) => {
 	return grid.map(row =>
-		row.map(cell => (cell === "." ? getRandomLetter(upperCase) : cell))
+		row.map(cell => (cell === "." ? getRandomLetter(alphabet, upperCase) : cell))
 	);
 };
 
